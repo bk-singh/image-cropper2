@@ -17,7 +17,7 @@ This image-cropper utility uses React.js and Node.js
 #### Client: React.js Code
 
 ```
- cd image-cropper/
+ cd client/
  npm install
  npm start
 ```
