@@ -4,6 +4,10 @@
 
 This image-cropper utility uses React.js and Node.js
 
+# Demo
+
+[Click here to see a demo on Heroku](https://image-cropper-utility.herokuapp.com/) (https://image-cropper-utility.herokuapp.com/)
+
 ## Steps to run Image Cropper:
 
 #### Server: Node.js Code
