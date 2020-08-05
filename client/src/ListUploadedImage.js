@@ -5,7 +5,7 @@ const Img = styled.img`
   margin: 20px;
 `;
 
-function ListUploadedImage({ data }) {
+function ListUploadedImage({ data, host }) {
   return (
     data && (
       <div>
@@ -14,7 +14,7 @@ function ListUploadedImage({ data }) {
           const { url } = img;
           return (
             <div key={i + 10}>
-              <Img key={i} src={url} alt={url} />
+              <Img key={i} src={"".concat(host, url)} alt={url} />
               <h5 key={i + 100}>{url}</h5>
               <br key={i + 1000} />
             </div>

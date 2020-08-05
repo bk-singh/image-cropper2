@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ListCroppedImage from "./ListCroppedImage";
 import ListUploadedImage from "./ListUploadedImage";
-
+const host = "http://localhost:60000";
 const Container = styled.div`
   margin: 50px;
   padding: 30px;
@@ -74,7 +74,7 @@ function Cropper({ history, data }) {
     redirectToUrl(history, "/preview/");
   };
   const uploadImage = async (images) => {
-    const url = "/api/base64/images";
+    const url = "".concat(host, "/api/base64/images");
     return await fetch(url, {
       method: "POST",
       headers: {
@@ -110,7 +110,7 @@ function Cropper({ history, data }) {
   return (
     <Container>
       {showUploadedFile ? (
-        <ListUploadedImage data={responseData} />
+        <ListUploadedImage data={responseData} host={host} />
       ) : (
         <div hidden={!showCroppedFile}>
           <Button type="primary" onClick={onUpload}>
